@@ -1,0 +1,31 @@
+PODS:
+  - AFNetworking (2.2.4):
+    - AFNetworking/NSURLConnection (= 2.2.4)
+    - AFNetworking/NSURLSession (= 2.2.4)
+    - AFNetworking/Reachability (= 2.2.4)
+    - AFNetworking/Security (= 2.2.4)
+    - AFNetworking/Serialization (= 2.2.4)
+    - AFNetworking/UIKit (= 2.2.4)
+  - AFNetworking/NSURLConnection (2.2.4):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.2.4):
+    - AFNetworking/NSURLConnection
+  - AFNetworking/Reachability (2.2.4)
+  - AFNetworking/Security (2.2.4)
+  - AFNetworking/Serialization (2.2.4)
+  - AFNetworking/UIKit (2.2.4):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - PDKeychainBindingsController (0.0.1)
+
+DEPENDENCIES:
+  - AFNetworking (~> 2.2.0)
+  - PDKeychainBindingsController
+
+SPEC CHECKSUMS:
+  AFNetworking: ab63e259fe91eef4519b371ef0a4955af0e73e64
+  PDKeychainBindingsController: 529f006d0707646b2bf0c79d476acdda58a9a587
+
+COCOAPODS: 0.35.0
