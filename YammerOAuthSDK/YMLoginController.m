@@ -9,6 +9,7 @@
 #import "PDKeychainBindings.h"
 #import "YMHTTPClient.h"
 #import "NSURL+YMQueryParameters.h"
+#import "Yambox-Swift.h"
 
 /////////////////////////////////////////////////////////
 // Yammer iOS Client SDK
@@ -159,14 +160,15 @@ NSString * const YAMMER_KEYCHAIN_STATE_KEY = @"yammerState";
                  NSString *authToken = access_token[@"token"];
                  
                  // For debugging purposes only
-                 NSLog(@"Yammer Login JSON: %@", responseObject);
-                 NSLog(@"authToken: %@", authToken);
+//                 NSLog(@"Yammer Login JSON: %@", responseObject);
+                 
+//                 NSLog(@"authToken: %@", authToken);
                  
                  // Save the authToken in the KeyChain
                  [weakSelf storeAuthTokenInKeychain:authToken];
                  
                  [weakSelf.delegate loginController:weakSelf didCompleteWithAuthToken:authToken];
-                 [[NSNotificationCenter defaultCenter] postNotificationName:YMYammerSDKLoginDidCompleteNotification object:weakSelf userInfo:@{YMYammerSDKAuthTokenUserInfoKey: authToken}];
+                 [[NSNotificationCenter defaultCenter] postNotificationName:YMYammerSDKLoginDidCompleteNotification object:weakSelf userInfo:@{YMYammerSDKAuthTokenUserInfoKey: authToken, YammerSDKUserUserInfoKey: jsonDict[@"user"]}];
              }
              failure:^(NSInteger statusCode, NSError *error) {
                  NSMutableDictionary *userInfo = [@{NSLocalizedDescriptionKey: @"Unable to retrieve authentication token from code"} mutableCopy];

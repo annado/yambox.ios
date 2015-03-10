@@ -29,3 +29,4 @@ NSString * const YMYammerSDKLoginDidFailNotification = @"YMYammerSDKLoginDidFail
 
 NSString * const YMYammerSDKAuthTokenUserInfoKey = @"YMYammerSDKAuthTokenUserInfoKey";
 NSString * const YMYammerSDKErrorUserInfoKey  = @"YMYammerSDKErrorUserInfoKey";
+NSString * const YammerSDKUserUserInfoKey = @"YammerSDKUserUserInfoKey";

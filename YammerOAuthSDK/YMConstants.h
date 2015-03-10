@@ -22,3 +22,4 @@ extern NSString * const YMYammerSDKLoginDidFailNotification;
 
 extern NSString * const YMYammerSDKAuthTokenUserInfoKey;
 extern NSString * const YMYammerSDKErrorUserInfoKey;
+extern NSString * const YammerSDKUserUserInfoKey;

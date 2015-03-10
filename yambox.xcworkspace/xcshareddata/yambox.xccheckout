@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>72DC819B-4686-48FC-B773-EFAAB751668A</string>
+	<key>IDESourceControlProjectName</key>
+	<string>yambox</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>64F0A0FB86309E226E7AFFB2FCC24081B288E08E</key>
+		<string>github.com:annado/yambox.ios.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>yambox.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>64F0A0FB86309E226E7AFFB2FCC24081B288E08E</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:annado/yambox.ios.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>64F0A0FB86309E226E7AFFB2FCC24081B288E08E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>64F0A0FB86309E226E7AFFB2FCC24081B288E08E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>yambox.ios</string>
+		</dict>
+	</array>
+</dict>
+</plist>

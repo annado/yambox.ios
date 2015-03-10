@@ -17,6 +17,9 @@
 		583844241AA67EB2007B2BE8 /* YMLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 583844201AA67EB2007B2BE8 /* YMLoginController.m */; };
 		5838442F1AA90690007B2BE8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5838442D1AA90690007B2BE8 /* LoginViewController.swift */; };
 		583844301AA90690007B2BE8 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5838442E1AA90690007B2BE8 /* LoginViewController.xib */; };
+		583844341AAF8F07007B2BE8 /* InboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583844321AAF8F07007B2BE8 /* InboxViewController.swift */; };
+		583844351AAF8F07007B2BE8 /* InboxViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 583844331AAF8F07007B2BE8 /* InboxViewController.xib */; };
+		583844371AAF94B5007B2BE8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583844361AAF94B5007B2BE8 /* User.swift */; };
 		67EE72FC65D2D74B2B0AA4CB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C5D953276C78E4A656E5A4F /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +54,9 @@
 		5838442D1AA90690007B2BE8 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = yambox/LoginViewController.swift; sourceTree = SOURCE_ROOT; };
 		5838442E1AA90690007B2BE8 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginViewController.xib; path = yambox/LoginViewController.xib; sourceTree = SOURCE_ROOT; };
 		583844311AA9330B007B2BE8 /* Yambox-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Yambox-Bridging-Header.h"; path = "yambox/Yambox-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		583844321AAF8F07007B2BE8 /* InboxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InboxViewController.swift; path = yambox/InboxViewController.swift; sourceTree = SOURCE_ROOT; };
+		583844331AAF8F07007B2BE8 /* InboxViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = InboxViewController.xib; path = yambox/InboxViewController.xib; sourceTree = SOURCE_ROOT; };
+		583844361AAF94B5007B2BE8 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = yambox/User.swift; sourceTree = SOURCE_ROOT; };
 		6C5D953276C78E4A656E5A4F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCC133E017D9C8F1821D8A3B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,6 +111,9 @@
 				583843F61AA67D50007B2BE8 /* Supporting Files */,
 				5838442D1AA90690007B2BE8 /* LoginViewController.swift */,
 				5838442E1AA90690007B2BE8 /* LoginViewController.xib */,
+				583844321AAF8F07007B2BE8 /* InboxViewController.swift */,
+				583844331AAF8F07007B2BE8 /* InboxViewController.xib */,
+				583844361AAF94B5007B2BE8 /* User.swift */,
 			);
 			path = Yambox;
 			sourceTree = "<group>";
@@ -251,6 +260,7 @@
 				583844031AA67D50007B2BE8 /* LaunchScreen.xib in Resources */,
 				583844301AA90690007B2BE8 /* LoginViewController.xib in Resources */,
 				583844001AA67D50007B2BE8 /* Images.xcassets in Resources */,
+				583844351AAF8F07007B2BE8 /* InboxViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,9 +311,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				583844341AAF8F07007B2BE8 /* InboxViewController.swift in Sources */,
 				5838442F1AA90690007B2BE8 /* LoginViewController.swift in Sources */,
 				583844231AA67EB2007B2BE8 /* YMHTTPClient.m in Sources */,
 				583843F91AA67D50007B2BE8 /* AppDelegate.swift in Sources */,
+				583844371AAF94B5007B2BE8 /* User.swift in Sources */,
 				583844211AA67EB2007B2BE8 /* NSURL+YMQueryParameters.m in Sources */,
 				583844221AA67EB2007B2BE8 /* YMConstants.m in Sources */,
 				583844241AA67EB2007B2BE8 /* YMLoginController.m in Sources */,
@@ -424,6 +436,7 @@
 			baseConfigurationReference = 04FD33BC14772280000B7D92 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = Yambox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -436,6 +449,7 @@
 			baseConfigurationReference = FCC133E017D9C8F1821D8A3B /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = Yambox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
