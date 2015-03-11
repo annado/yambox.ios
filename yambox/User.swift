@@ -12,7 +12,7 @@ private var _currentUser = User()
 let UserLoggedInNotification = "UserLoggedInNotification"
 let kUserDataKey = "kUserDataKey"
 
-class User {
+class User : NSObject {
     
     var name : NSString = ""
     var userData : NSDictionary = [:]
@@ -26,7 +26,12 @@ class User {
         return _currentUser
     }
     
-    init() {
+    override init() {
+        super.init()
+        NSNotificationCenter.defaultCenter().addObserver(self,
+            selector: "loginSuccess:",
+            name: YMYammerSDKLoginDidCompleteNotification,
+            object: nil)
     }
     
     func initUser(data : NSDictionary) {
@@ -39,14 +44,18 @@ class User {
     func isLoggedIn() -> Bool {
         return loggedIn;
     }
+  
+    func login() {
+        YMLoginController.sharedInstance().startLogin();
+    }
     
-    func login(data : NSDictionary) {
-        initUser(data)
-        if (loggedIn) {
-            saveUser()
-        }
-        println("Name \(name) logged in!")
+    func loginSuccess(note: NSNotification) {
+        let userInfo : [NSObject : AnyObject] = note.userInfo!
+        let authToken : NSString = userInfo[YMYammerSDKAuthTokenUserInfoKey] as NSString
+        let data : NSDictionary = userInfo[YammerSDKUserUserInfoKey] as NSDictionary
         
+        initUser(data)
+        saveUser()
         loginNotification()
     }
     

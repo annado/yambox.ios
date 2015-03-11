@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AppViewController" customModule="Yambox" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="Yambox" customModuleProvider="target">
             <connections>
+                <outlet property="statusLabel" destination="JG0-KQ-SvP" id="79b-E4-tLS"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -47,6 +48,11 @@
                     <color key="textColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JG0-KQ-SvP">
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
@@ -58,10 +64,12 @@
                 <constraint firstItem="JGp-Pj-kiX" firstAttribute="top" secondItem="S5M-aR-RhZ" secondAttribute="bottom" constant="-25" id="WMy-CO-VM8"/>
                 <constraint firstAttribute="centerY" secondItem="S5M-aR-RhZ" secondAttribute="centerY" constant="100" id="XOL-1M-BOD"/>
                 <constraint firstAttribute="trailing" secondItem="JGp-Pj-kiX" secondAttribute="trailing" constant="65" id="YCy-PG-c0w"/>
+                <constraint firstItem="nzD-Fl-MV6" firstAttribute="top" secondItem="JG0-KQ-SvP" secondAttribute="bottom" id="YjS-LE-zyp"/>
                 <constraint firstAttribute="centerX" secondItem="S5M-aR-RhZ" secondAttribute="centerX" id="bj7-m1-Tt7"/>
                 <constraint firstAttribute="centerX" secondItem="nzD-Fl-MV6" secondAttribute="centerX" id="nnu-vl-qDH"/>
                 <constraint firstAttribute="bottom" secondItem="nzD-Fl-MV6" secondAttribute="bottom" constant="50" id="rNE-Hf-91G"/>
                 <constraint firstAttribute="centerY" secondItem="nzD-Fl-MV6" secondAttribute="centerY" id="xNl-db-fak"/>
+                <constraint firstAttribute="centerX" secondItem="JG0-KQ-SvP" secondAttribute="centerX" id="ys7-Il-0K4"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
             <variation key="default">
