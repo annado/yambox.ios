@@ -10,31 +10,40 @@ import UIKit
 
 class InboxViewController: UIViewController {
 
-    @IBOutlet weak var welcomeLabel: UILabel!
+    @IBOutlet weak var listView: UIView!
+    @IBOutlet weak var navigationBar: UINavigationBar!
     
-    @IBAction func logOut(sender: UIButton) {
-        User.currentUser().logout()
-    }
-    
-    lazy var yammerClient : YammerClient = YammerClient()
+    lazy var listViewController : InboxListViewController = InboxListViewController(nibName: "InboxListViewController", bundle: nil)
+//    lazy var navController : UINavigationController = {
+//        return UINavigationController(rootViewController: self.listViewController)
+//    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        println("InboxViewController")
-//        println(User.currentUser().userData)
+        // init NavigationBar
+//        setupNavigationController()
+//        self.addChildViewController(navController)
+//        UIView *menuView = menuNavController.view;
+//        self.navigationBar.addSubview(menuNavController.view)
         
-        welcomeLabel.text = User.currentUser().name
-        
-        yammerClient.getInboxMessages({ (messages :AnyObject!) -> Void in
-            println("Messages: \(messages)")
-            }, failure: { (error: NSError!) -> Void in
-            println("Failed: \(error)")
-        })
+        // init InboxListViewController
+        self.addChildViewController(self.listViewController)
+        self.listView = self.listViewController.view;
+        var frame :CGRect = self.listView.frame;
+        frame.origin.y = 50;
+//        frame.size.height = 262;
+        self.listView.frame = frame;
+//        self.view.addSubview(self.listView)
     }
-
-    func handleMessages(AnyObject!) {
-        
+    
+    func setupNavigationController() {
+        var logoutButton = UIBarButtonItem(title: "Logout", style: UIBarButtonItemStyle.Plain, target: self, action: "logout")
+//        menuNavController
+    }
+    
+    func logout() {
+        User.currentUser().logout()
     }
 
 }

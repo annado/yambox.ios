@@ -34,6 +34,10 @@ class User : NSObject {
             object: nil)
     }
     
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+    
     func initUser(data : NSDictionary) {
         name = data["full_name"] as NSString
         userData = data

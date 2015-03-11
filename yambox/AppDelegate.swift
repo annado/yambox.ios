@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.updateRootViewController()
 
         NSNotificationCenter.defaultCenter().addObserver(self,
-            selector: "handleLoginAction:",
+            selector: "handleLoginAction",
             name: UserLoggedInNotification,
             object: nil)
         
@@ -60,7 +60,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
     
-    func handleLoginAction(note: NSNotification) {
+    func handleLoginAction() {
         self.updateRootViewController()
     }
     
@@ -69,7 +69,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if (User.currentUser().isLoggedIn()) {
             println("isLoggedIn")
-            rootViewController = InboxViewController(nibName: "InboxViewController", bundle: nil)
+            
+            var inboxViewController = InboxListViewController(nibName: "InboxListViewController", bundle: nil)
+            rootViewController = UINavigationController(rootViewController: inboxViewController)
         } else {
             println("is not LoggedIn")
             rootViewController = LoginViewController(nibName: "LoginViewController", bundle: nil)

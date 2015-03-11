@@ -17,15 +17,19 @@ class LoginViewController: UIViewController {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "didFailLogin:", name: YMYammerSDKLoginDidFailNotification, object: nil)
     }
     
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+    
     @IBAction func didTapSignInWithYammer() {
         User.currentUser().login()
     }
-    
     
     func didFailLogin(note: NSNotification) {
 //        var error:NSError = note.userInfo[YMYammerSDKErrorUserInfoKey];
         println(note)
         self.statusLabel.text = "Sign in failed."
     }
+    
 
 }
