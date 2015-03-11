@@ -68,12 +68,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var rootViewController : UIViewController
         
         if (User.currentUser().isLoggedIn()) {
-            println("isLoggedIn")
-            
             var inboxViewController = InboxListViewController(nibName: "InboxListViewController", bundle: nil)
             rootViewController = UINavigationController(rootViewController: inboxViewController)
         } else {
-            println("is not LoggedIn")
             rootViewController = LoginViewController(nibName: "LoginViewController", bundle: nil)
         }
         window?.rootViewController = rootViewController
