@@ -20,6 +20,7 @@
 		583844341AAF8F07007B2BE8 /* InboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583844321AAF8F07007B2BE8 /* InboxViewController.swift */; };
 		583844351AAF8F07007B2BE8 /* InboxViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 583844331AAF8F07007B2BE8 /* InboxViewController.xib */; };
 		583844371AAF94B5007B2BE8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583844361AAF94B5007B2BE8 /* User.swift */; };
+		583844391AAFBC1B007B2BE8 /* LogoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 583844381AAFBC1B007B2BE8 /* LogoView.xib */; };
 		67EE72FC65D2D74B2B0AA4CB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C5D953276C78E4A656E5A4F /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,7 @@
 		583844321AAF8F07007B2BE8 /* InboxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InboxViewController.swift; path = yambox/InboxViewController.swift; sourceTree = SOURCE_ROOT; };
 		583844331AAF8F07007B2BE8 /* InboxViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = InboxViewController.xib; path = yambox/InboxViewController.xib; sourceTree = SOURCE_ROOT; };
 		583844361AAF94B5007B2BE8 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = yambox/User.swift; sourceTree = SOURCE_ROOT; };
+		583844381AAFBC1B007B2BE8 /* LogoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LogoView.xib; path = yambox/LogoView.xib; sourceTree = SOURCE_ROOT; };
 		6C5D953276C78E4A656E5A4F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCC133E017D9C8F1821D8A3B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -114,6 +116,7 @@
 				583844321AAF8F07007B2BE8 /* InboxViewController.swift */,
 				583844331AAF8F07007B2BE8 /* InboxViewController.xib */,
 				583844361AAF94B5007B2BE8 /* User.swift */,
+				583844381AAFBC1B007B2BE8 /* LogoView.xib */,
 			);
 			path = Yambox;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 				583844301AA90690007B2BE8 /* LoginViewController.xib in Resources */,
 				583844001AA67D50007B2BE8 /* Images.xcassets in Resources */,
 				583844351AAF8F07007B2BE8 /* InboxViewController.xib in Resources */,
+				583844391AAFBC1B007B2BE8 /* LogoView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AppViewController" customModule="Yambox" customModuleProvider="target">
@@ -11,20 +12,69 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nzD-Fl-MV6">
-                    <rect key="frame" x="88" y="285" width="140" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nzD-Fl-MV6">
+                    <rect key="frame" x="117" y="650" width="180" height="36"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="Sign in with Yammer">
+                        <color key="titleColor" red="0.19215686274509805" green="0.50196078431372548" blue="0.69019607843137254" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
                         <action selector="didTapSignInWithYammer" destination="-1" eventType="touchUpInside" id="zIq-SZ-s6C"/>
                     </connections>
                 </button>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="YammerLogo" translatesAutoresizingMaskIntoConstraints="NO" id="S5M-aR-RhZ">
+                    <rect key="frame" x="65" y="193" width="284" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="5lU-XY-IDk"/>
+                        <constraint firstAttribute="width" secondItem="S5M-aR-RhZ" secondAttribute="height" multiplier="175:156" id="HmU-sF-xZS"/>
+                        <constraint firstAttribute="width" constant="400" id="p09-8H-cWB"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="5lU-XY-IDk"/>
+                            <exclude reference="HmU-sF-xZS"/>
+                            <exclude reference="p09-8H-cWB"/>
+                        </mask>
+                    </variation>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="inbox" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JGp-Pj-kiX">
+                    <rect key="frame" x="230" y="318" width="119" height="61"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="51"/>
+                    <color key="textColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="centerY" secondItem="S5M-aR-RhZ" secondAttribute="centerY" constant="100" id="2ma-rQ-gmQ"/>
+                <constraint firstItem="JGp-Pj-kiX" firstAttribute="leading" secondItem="S5M-aR-RhZ" secondAttribute="trailing" constant="14" id="5PP-Bc-dNZ"/>
+                <constraint firstAttribute="centerX" secondItem="S5M-aR-RhZ" secondAttribute="centerX" id="5oF-Xh-iqj"/>
+                <constraint firstAttribute="trailing" secondItem="S5M-aR-RhZ" secondAttribute="trailing" constant="65" id="7if-Qm-xdd"/>
+                <constraint firstItem="S5M-aR-RhZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="65" id="Pgg-mi-KnO"/>
+                <constraint firstItem="JGp-Pj-kiX" firstAttribute="top" secondItem="S5M-aR-RhZ" secondAttribute="bottom" constant="-25" id="WMy-CO-VM8"/>
+                <constraint firstAttribute="centerY" secondItem="S5M-aR-RhZ" secondAttribute="centerY" constant="100" id="XOL-1M-BOD"/>
+                <constraint firstAttribute="trailing" secondItem="JGp-Pj-kiX" secondAttribute="trailing" constant="65" id="YCy-PG-c0w"/>
+                <constraint firstAttribute="centerX" secondItem="S5M-aR-RhZ" secondAttribute="centerX" id="bj7-m1-Tt7"/>
+                <constraint firstAttribute="centerX" secondItem="nzD-Fl-MV6" secondAttribute="centerX" id="nnu-vl-qDH"/>
+                <constraint firstAttribute="bottom" secondItem="nzD-Fl-MV6" secondAttribute="bottom" constant="50" id="rNE-Hf-91G"/>
+                <constraint firstAttribute="centerY" secondItem="nzD-Fl-MV6" secondAttribute="centerY" id="xNl-db-fak"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="2ma-rQ-gmQ"/>
+                    <exclude reference="5oF-Xh-iqj"/>
+                    <exclude reference="5PP-Bc-dNZ"/>
+                    <exclude reference="xNl-db-fak"/>
+                </mask>
+            </variation>
         </view>
     </objects>
+    <resources>
+        <image name="YammerLogo" width="621" height="150"/>
+    </resources>
 </document>
