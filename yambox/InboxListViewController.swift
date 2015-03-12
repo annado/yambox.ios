@@ -22,7 +22,7 @@ class InboxListViewController: UIViewController, UITableViewDelegate, UITableVie
         self.title = "Inbox"
         
         // setup tableView
-        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        self.tableView.registerClass(MGSwipeTableCell.self, forCellReuseIdentifier: "cell")
         
         addRefreshControl()
         loadMessages()
@@ -31,6 +31,10 @@ class InboxListViewController: UIViewController, UITableViewDelegate, UITableVie
         var logoutButton = UIBarButtonItem(title: "Logout", style: UIBarButtonItemStyle.Plain, target: self, action: "logout")
         self.navigationItem.rightBarButtonItem = logoutButton
 
+    }
+    
+    func logout() {
+        User.currentUser().logout()
     }
 
     // MARK: UIRefreshControl
@@ -69,10 +73,31 @@ class InboxListViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as UITableViewCell
-        
+        let kCellIdentifier : String = "cell"
+        var cell : MGSwipeTableCell = self.tableView.dequeueReusableCellWithIdentifier(kCellIdentifier, forIndexPath: indexPath) as MGSwipeTableCell
+
         cell.textLabel?.text = self.messages[indexPath.row]["content_excerpt"] as NSString
-        
+
+        var swipeExpansionSettings = MGSwipeExpansionSettings()
+        swipeExpansionSettings.threshold = 1
+        swipeExpansionSettings.fillOnTrigger = true
+        swipeExpansionSettings.buttonIndex = 0
+
+        cell.leftButtons = [MGSwipeButton(title: "Mark as Read", backgroundColor: UIColor(red: 0.443, green: 0.737, blue: 0.471, alpha: 1.0), callback: { (tableCell : MGSwipeTableCell!) -> Bool in
+            println("Mark as Read!")
+            return true
+        })]
+
+        cell.leftSwipeSettings.transition = MGSwipeTransition.TransitionBorder
+        cell.leftExpansion = swipeExpansionSettings
+
+        cell.rightButtons = [MGSwipeButton(title: "Snooze", backgroundColor: UIColor(red:1.000, green:0.875, blue:0.275, alpha:1.0), callback: { (tableCell : MGSwipeTableCell!) -> Bool in
+            println("Snooze!")
+            return true
+        })]
+        cell.rightSwipeSettings.transition = MGSwipeTransition.TransitionBorder
+        cell.rightExpansion = swipeExpansionSettings
+
         return cell
     }
     
@@ -80,8 +105,15 @@ class InboxListViewController: UIViewController, UITableViewDelegate, UITableVie
         
     }
     
-    func logout() {
-        User.currentUser().logout()
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        
     }
-
+    
+//    func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [AnyObject]? {
+//    }
+    
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
 }

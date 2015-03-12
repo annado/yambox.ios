@@ -12,5 +12,7 @@
 #import "YMConstants.h"
 #import "YMHTTPClient.h"
 #import "YMLoginController.h"
+#import "MGSwipeTableCell.h"
+#import "MGSwipeButton.h"
 
 #endif
