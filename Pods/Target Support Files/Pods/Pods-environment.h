@@ -48,6 +48,12 @@
 #define COCOAPODS_VERSION_MINOR_AFNetworking_UIKit 2
 #define COCOAPODS_VERSION_PATCH_AFNetworking_UIKit 4
 
+// MGSwipeTableCell
+#define COCOAPODS_POD_AVAILABLE_MGSwipeTableCell
+#define COCOAPODS_VERSION_MAJOR_MGSwipeTableCell 1
+#define COCOAPODS_VERSION_MINOR_MGSwipeTableCell 3
+#define COCOAPODS_VERSION_PATCH_MGSwipeTableCell 5
+
 // PDKeychainBindingsController
 #define COCOAPODS_POD_AVAILABLE_PDKeychainBindingsController
 #define COCOAPODS_VERSION_MAJOR_PDKeychainBindingsController 0

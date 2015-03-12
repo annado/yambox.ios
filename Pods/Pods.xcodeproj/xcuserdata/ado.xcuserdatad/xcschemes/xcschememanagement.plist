@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-MGSwipeTableCell.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-PDKeychainBindingsController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>3148367D5D30708D5D2160BE</key>
+		<key>46DA9BC57273FD6D698C1D23</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7D6678D92F1EBF691C10F50B</key>
+		<key>7AAB3DFE885E2E75ECDCADBF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>98510820219CAE9673B11579</key>
+		<key>86C355CA4B794DCA0BB39701</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B46B532598146088F3CF70A4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
